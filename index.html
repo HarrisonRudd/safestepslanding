@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSteps - GPS Wearable for Caregivers</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback styles in case CSS fails to load */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #183153;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -72,6 +86,15 @@
         <p>Launching soon. Be the first to know.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        // Fallback for JavaScript
+        if (typeof waitlistForm === 'undefined') {
+            document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for joining our waitlist!');
+            });
+        }
+    </script>
 </body>
 </html> 
